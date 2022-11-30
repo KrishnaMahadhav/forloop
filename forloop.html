@@ -1,0 +1,34 @@
+<html>
+<head> <title> JavaScript Palindrome </title>
+</head>
+<body>
+<center> <h1>Validate the Palindrome numbers or strings using For looping statement</h1></center>
+Enter a String or Number : <input id = "stringinput">
+<br><br>
+<button onclick = "validatePalin(stringinput.value)"> Palindrome </button>
+<script>
+function validatePalin(str) {
+const string = str;
+ // get the total length of the words
+ const len = str.length;
+ var result=0;
+ // Use for loop to divide the words into 2 half
+ for (let i = 0; i < len / 2; i++) {
+ // validate the first and last characters are same
+ if (str[i] !== str[len - 1 - i]) {
+result+=1; 
+ }
+ }
+if (result==0) // validate the result to find palindrome or not
+{
+18
+ alert( 'It is a palindrome');
+}
+else
+{
+ alert( 'It is not a palindrome');
+}
+}
+</script>
+</body>
+</html>
